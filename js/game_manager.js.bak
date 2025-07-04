@@ -157,7 +157,7 @@ GameManager.prototype.move = function (direction) {
           // 标记即将被合并的磁贴
           tile.willMerge = true;
           next.willMerge = true;
-          // console.log(tile);
+          console.log(tile);
 
           var merged = new Tile(positions.next, tile.value * 2);
           merged.mergedFrom = [tile, next];

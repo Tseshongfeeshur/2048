@@ -53,12 +53,12 @@ h1.title {
 
 @include helpers.keyframes(move-up) {
   0% {
-    top: 25px;
+    transform: translateY(0px);
     opacity: 1;
   }
-
+  
   100% {
-    top: -50px;
+    transform: translateY(-100px);
     opacity: 0;
   }
 }
@@ -284,7 +284,7 @@ hr {
     position: absolute;
     z-index: 2;
   }
-  
+
   .tile,
   .tile .tile-inner {
     width: math.ceil($tile-size);
@@ -306,11 +306,6 @@ hr {
 
 // End of game-field mixin
 @include game-field($field-width, $grid-spacing, $grid-row-cells);
-
-// 事先声明
-.tile-inner {
-  will-change: transform, opacity;
-}
 
 .tile {
   position: absolute; // Makes transforms relative to the top-left corner

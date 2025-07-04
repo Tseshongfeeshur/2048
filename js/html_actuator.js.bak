@@ -58,7 +58,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   var classes = ["tile", "tile-" + tile.value, positionClass];
 
   // 给即将合并的磁贴赋类
-  // console.log(tile);
+  console.log(tile);
   if (tile.willMerge) {
     classes.push("tile-will-merge");
   }

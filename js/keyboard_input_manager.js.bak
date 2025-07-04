@@ -114,7 +114,7 @@ KeyboardInputManager.prototype.listen = function () {
     var absDx = Math.abs(dx);
     var absDy = Math.abs(dy);
   
-    if (Math.max(absDx, absDy) > 5) {
+    if (Math.max(absDx, absDy) > 3) {
       gestureHandled = true;
   
       // (right : left) : (down : up)
