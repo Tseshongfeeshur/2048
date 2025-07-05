@@ -41,6 +41,11 @@ body {
   margin: 80px 0;
 }
 
+// 删除浏览器的点击反馈
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .heading {
   @include helpers.clearfix;
 }
@@ -170,8 +175,19 @@ hr {
   color: $bright-text-color;
   height: 40px;
   line-height: 42px;
-}
+  transition:
+    background .2s ease,
+    transform .1s ease;
 
+  &:hover {
+    background: color.adjust($game-container-background, $lightness: -10%);
+    transform: scale(1.03);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
 
 // Game field mixin used to render CSS at different width
 @mixin game-field($field-width, $grid-spacing, $grid-row-cells) {
@@ -199,6 +215,7 @@ hr {
       bottom: 0;
       left: 0;
       background: rgba($tile-color, .5);
+      border-radius: $tile-border-radius + $grid-spacing;
       z-index: 100;
 
       text-align: center;
@@ -228,7 +245,7 @@ hr {
 	}
       }
 
-      @include helpers.animation(fade-in 800ms ease $transition-speed * 12);
+      @include helpers.animation(fade-in $transition-speed ease-out $transition-speed);
       @include helpers.animation-fill-mode(both);
 
       &.game-won {

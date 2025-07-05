@@ -12,6 +12,10 @@ body {
   margin: 80px 0;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .heading:after {
   content: "";
   display: block;
@@ -182,11 +186,12 @@ hr {
   bottom: 0;
   left: 0;
   background: rgba(238, 228, 218, 0.5);
+  border-radius: 18px;
   z-index: 100;
   text-align: center;
-  -webkit-animation: fade-in 800ms ease 2880ms;
-  -moz-animation: fade-in 800ms ease 2880ms;
-  animation: fade-in 800ms ease 2880ms;
+  -webkit-animation: fade-in 240ms ease-out 240ms;
+  -moz-animation: fade-in 240ms ease-out 240ms;
+  animation: fade-in 240ms ease-out 240ms;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   animation-fill-mode: both;
@@ -211,7 +216,15 @@ hr {
   color: #f9f6f2;
   height: 40px;
   line-height: 42px;
+  transition: background 0.2s ease, transform 0.1s ease;
   margin-left: 9px;
+}
+.game-container .game-message a:hover {
+  background: rgb(130.2857142857, 112.5194805195, 97.7142857143);
+  transform: scale(1.03);
+}
+.game-container .game-message a:active {
+  transform: scale(0.97);
 }
 .game-container .game-message a.keep-playing-button {
   display: none;
@@ -645,9 +658,17 @@ hr {
   color: #f9f6f2;
   height: 40px;
   line-height: 42px;
+  transition: background 0.2s ease, transform 0.1s ease;
   display: block;
   text-align: center;
   float: right;
+}
+.restart-button:hover {
+  background: rgb(130.2857142857, 112.5194805195, 97.7142857143);
+  transform: scale(1.03);
+}
+.restart-button:active {
+  transform: scale(0.97);
 }
 
 .game-explanation {
@@ -709,11 +730,12 @@ hr {
     bottom: 0;
     left: 0;
     background: rgba(238, 228, 218, 0.5);
+    border-radius: 14px;
     z-index: 100;
     text-align: center;
-    -webkit-animation: fade-in 800ms ease 2880ms;
-    -moz-animation: fade-in 800ms ease 2880ms;
-    animation: fade-in 800ms ease 2880ms;
+    -webkit-animation: fade-in 240ms ease-out 240ms;
+    -moz-animation: fade-in 240ms ease-out 240ms;
+    animation: fade-in 240ms ease-out 240ms;
     -webkit-animation-fill-mode: both;
     -moz-animation-fill-mode: both;
     animation-fill-mode: both;
@@ -738,7 +760,15 @@ hr {
     color: #f9f6f2;
     height: 40px;
     line-height: 42px;
+    transition: background 0.2s ease, transform 0.1s ease;
     margin-left: 9px;
+  }
+  .game-container .game-message a:hover {
+    background: rgb(130.2857142857, 112.5194805195, 97.7142857143);
+    transform: scale(1.03);
+  }
+  .game-container .game-message a:active {
+    transform: scale(0.97);
   }
   .game-container .game-message a.keep-playing-button {
     display: none;
