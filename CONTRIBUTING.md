@@ -8,7 +8,7 @@ Please follow the house rules to have a bigger chance of your contribution being
 ### How to make changes
  - To make changes, create a new branch based on `master` and make them there, then create a Pull Request to master.  
  - If you want to modify the CSS, please edit the SCSS files present in `style/`: `main.scss` and others. Don't edit the `main.css`, because it's supposed to be generated.  
- In order to compile your SCSS modifications, you need to use the `sass` gem (install it by running `gem install sass` once Ruby is installed).  
+ In order to compile your SCSS modifications, you need to use the `sass` command (install it by running `npm install sass` once Node.js is installed).  
  To run SASS, simply use the following command:  
  `sass --unix-newlines --watch style/main.scss`  
  SASS will automatically recompile your css when changed.

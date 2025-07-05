@@ -28,31 +28,31 @@ h1.title {
 
 @-webkit-keyframes move-up {
   0% {
-    top: 25px;
+    transform: translateY(-25px);
     opacity: 1;
   }
   100% {
-    top: -50px;
+    transform: translateY(-100px);
     opacity: 0;
   }
 }
 @-moz-keyframes move-up {
   0% {
-    top: 25px;
+    transform: translateY(-25px);
     opacity: 1;
   }
   100% {
-    top: -50px;
+    transform: translateY(-100px);
     opacity: 0;
   }
 }
 @keyframes move-up {
   0% {
-    top: 25px;
+    transform: translateY(-25px);
     opacity: 1;
   }
   100% {
-    top: -50px;
+    transform: translateY(-100px);
     opacity: 0;
   }
 }
@@ -184,9 +184,9 @@ hr {
   background: rgba(238, 228, 218, 0.5);
   z-index: 100;
   text-align: center;
-  -webkit-animation: fade-in 800ms ease 2400ms;
-  -moz-animation: fade-in 800ms ease 2400ms;
-  animation: fade-in 800ms ease 2400ms;
+  -webkit-animation: fade-in 800ms ease 2880ms;
+  -moz-animation: fade-in 800ms ease 2880ms;
+  animation: fade-in 800ms ease 2880ms;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   animation-fill-mode: both;
@@ -387,9 +387,9 @@ hr {
 
 .tile {
   position: absolute;
-  -webkit-transition: 200ms cubic-bezier(0.28, 0.27, 0.22, 1.19);
-  -moz-transition: 200ms cubic-bezier(0.28, 0.27, 0.22, 1.19);
-  transition: 200ms cubic-bezier(0.28, 0.27, 0.22, 1.19);
+  -webkit-transition: 240ms cubic-bezier(0.1, 0.41, 0, 1.29);
+  -moz-transition: 240ms cubic-bezier(0.1, 0.41, 0, 1.29);
+  transition: 240ms cubic-bezier(0.1, 0.41, 0, 1.29);
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   transition-property: transform;
@@ -397,40 +397,37 @@ hr {
 .tile .tile-inner {
   border-radius: 8px;
   background: #eee4da;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   text-align: center;
   font-weight: bold;
   z-index: 10;
   font-size: 55px;
 }
 .tile.tile-2 .tile-inner {
-  background: #eee4da;
-  box-shadow: 0 0 30px 10px rgba(243.0660792952, 214.5572687225, 116.4339207048, 0), inset 0 0 0 1px rgba(255, 255, 255, 0), 0 1px 5px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0px, rgba(255, 255, 255, 0.08) 1.2px, rgba(255, 255, 255, 0) 3px), #eee4da;
 }
 .tile.tile-4 .tile-inner {
-  background: rgb(237.9, 224.6, 200.8);
-  box-shadow: 0 0 30px 10px rgba(243.0660792952, 214.5572687225, 116.4339207048, 0), inset 0 0 0 1px rgba(255, 255, 255, 0), 0 1px 5px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0px, rgba(255, 255, 255, 0.08) 1.2px, rgba(255, 255, 255, 0) 3px), rgb(237.9, 224.6, 200.8);
 }
 .tile.tile-8 .tile-inner {
   color: #f9f6f2;
-  background: rgb(242.86, 177.64, 122.22);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0px, rgba(255, 255, 255, 0.08) 1.2px, rgba(255, 255, 255, 0) 3px), rgb(242.86, 177.64, 122.22);
 }
 .tile.tile-16 .tile-inner {
   color: #f9f6f2;
-  background: rgb(245.565, 149.71, 100.18);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0px, rgba(255, 255, 255, 0.08) 1.2px, rgba(255, 255, 255, 0) 3px), rgb(245.565, 149.71, 100.18);
 }
 .tile.tile-32 .tile-inner {
   color: #f9f6f2;
-  background: rgb(247.17, 124.53, 95.19);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0px, rgba(255, 255, 255, 0.08) 1.2px, rgba(255, 255, 255, 0) 3px), rgb(247.17, 124.53, 95.19);
 }
 .tile.tile-64 .tile-inner {
   color: #f9f6f2;
-  background: rgb(247.125, 94.95, 59.4);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0px, rgba(255, 255, 255, 0.08) 1.2px, rgba(255, 255, 255, 0) 3px), rgb(247.125, 94.95, 59.4);
 }
 .tile.tile-128 .tile-inner {
   color: #f9f6f2;
-  background: rgb(237.4, 207.6, 114.8);
-  box-shadow: 0 0 30px 10px rgba(243.0660792952, 214.5572687225, 116.4339207048, 0.2380952381), inset 0 0 0 1px rgba(255, 255, 255, 0.1428571429), 0 1px 5px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0px, rgba(255, 255, 255, 0.08) 1.2px, rgba(255, 255, 255, 0) 3px), rgb(237.4, 207.6, 114.8);
   font-size: 45px;
 }
 @media screen and (max-width: 520px) {
@@ -440,8 +437,7 @@ hr {
 }
 .tile.tile-256 .tile-inner {
   color: #f9f6f2;
-  background: rgb(237.3, 204.2, 97.6);
-  box-shadow: 0 0 30px 10px rgba(243.0660792952, 214.5572687225, 116.4339207048, 0.3174603175), inset 0 0 0 1px rgba(255, 255, 255, 0.1904761905), 0 1px 5px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0px, rgba(255, 255, 255, 0.08) 1.2px, rgba(255, 255, 255, 0) 3px), rgb(237.3, 204.2, 97.6);
   font-size: 45px;
 }
 @media screen and (max-width: 520px) {
@@ -451,8 +447,7 @@ hr {
 }
 .tile.tile-512 .tile-inner {
   color: #f9f6f2;
-  background: rgb(237.2, 200.8, 80.4);
-  box-shadow: 0 0 30px 10px rgba(243.0660792952, 214.5572687225, 116.4339207048, 0.3968253968), inset 0 0 0 1px rgba(255, 255, 255, 0.2380952381), 0 1px 5px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0px, rgba(255, 255, 255, 0.08) 1.2px, rgba(255, 255, 255, 0) 3px), rgb(237.2, 200.8, 80.4);
   font-size: 45px;
 }
 @media screen and (max-width: 520px) {
@@ -462,8 +457,7 @@ hr {
 }
 .tile.tile-1024 .tile-inner {
   color: #f9f6f2;
-  background: rgb(237.1, 197.4, 63.2);
-  box-shadow: 0 0 30px 10px rgba(243.0660792952, 214.5572687225, 116.4339207048, 0.4761904762), inset 0 0 0 1px rgba(255, 255, 255, 0.2857142857), 0 1px 5px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0px, rgba(255, 255, 255, 0.08) 1.2px, rgba(255, 255, 255, 0) 3px), rgb(237.1, 197.4, 63.2);
   font-size: 35px;
 }
 @media screen and (max-width: 520px) {
@@ -473,8 +467,7 @@ hr {
 }
 .tile.tile-2048 .tile-inner {
   color: #f9f6f2;
-  background: #edc22e;
-  box-shadow: 0 0 30px 10px rgba(243.0660792952, 214.5572687225, 116.4339207048, 0.5555555556), inset 0 0 0 1px rgba(255, 255, 255, 0.3333333333), 0 1px 5px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0px, rgba(255, 255, 255, 0.08) 1.2px, rgba(255, 255, 255, 0) 3px), #edc22e;
   font-size: 35px;
 }
 @media screen and (max-width: 520px) {
@@ -495,14 +488,12 @@ hr {
 
 @-webkit-keyframes appear {
   0% {
-    opacity: 0;
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -ms-transform: scale(0);
     transform: scale(0);
   }
   100% {
-    opacity: 1;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
@@ -511,14 +502,12 @@ hr {
 }
 @-moz-keyframes appear {
   0% {
-    opacity: 0;
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -ms-transform: scale(0);
     transform: scale(0);
   }
   100% {
-    opacity: 1;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
@@ -527,14 +516,12 @@ hr {
 }
 @keyframes appear {
   0% {
-    opacity: 0;
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -ms-transform: scale(0);
     transform: scale(0);
   }
   100% {
-    opacity: 1;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
@@ -542,80 +529,20 @@ hr {
   }
 }
 .tile-new .tile-inner {
-  -webkit-animation: pop 200ms ease;
-  -moz-animation: pop 200ms ease;
-  animation: pop 200ms ease;
+  -webkit-animation: appear 240ms cubic-bezier(0.1, 0.41, 0, 1.29);
+  -moz-animation: appear 240ms cubic-bezier(0.1, 0.41, 0, 1.29);
+  animation: appear 240ms cubic-bezier(0.1, 0.41, 0, 1.29);
   -webkit-animation-fill-mode: backwards;
   -moz-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
   z-index: 30;
 }
 
-@-webkit-keyframes pop {
-  0% {
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-  }
-  60% {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@-moz-keyframes pop {
-  0% {
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-  }
-  60% {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@keyframes pop {
-  0% {
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-  }
-  60% {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-}
 .tile-merged .tile-inner {
   z-index: 20;
-  -webkit-animation: pop 200ms ease 40ms;
-  -moz-animation: pop 200ms ease 40ms;
-  animation: pop 200ms ease 40ms;
+  -webkit-animation: appear 240ms cubic-bezier(0.1, 0.41, 0, 1.29) 38.4ms;
+  -moz-animation: appear 240ms cubic-bezier(0.1, 0.41, 0, 1.29) 38.4ms;
+  animation: appear 240ms cubic-bezier(0.1, 0.41, 0, 1.29) 38.4ms;
   -webkit-animation-fill-mode: backwards;
   -moz-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
@@ -634,7 +561,7 @@ hr {
     -moz-transform: scale(0.8);
     -ms-transform: scale(0.8);
     transform: scale(0.8);
-    opacity: 0.9;
+    opacity: 1;
   }
   100% {
     -webkit-transform: scale(0.8);
@@ -657,7 +584,7 @@ hr {
     -moz-transform: scale(0.8);
     -ms-transform: scale(0.8);
     transform: scale(0.8);
-    opacity: 0.9;
+    opacity: 1;
   }
   100% {
     -webkit-transform: scale(0.8);
@@ -680,7 +607,7 @@ hr {
     -moz-transform: scale(0.8);
     -ms-transform: scale(0.8);
     transform: scale(0.8);
-    opacity: 0.9;
+    opacity: 1;
   }
   100% {
     -webkit-transform: scale(0.8);
@@ -692,9 +619,9 @@ hr {
 }
 .tile-will-merge .tile-inner {
   opacity: 0;
-  -webkit-animation: disappear 200ms ease-out;
-  -moz-animation: disappear 200ms ease-out;
-  animation: disappear 200ms ease-out;
+  -webkit-animation: disappear 240ms cubic-bezier(0.1, 0.41, 0, 1.29);
+  -moz-animation: disappear 240ms cubic-bezier(0.1, 0.41, 0, 1.29);
+  animation: disappear 240ms cubic-bezier(0.1, 0.41, 0, 1.29);
 }
 
 .above-game:after {
@@ -784,9 +711,9 @@ hr {
     background: rgba(238, 228, 218, 0.5);
     z-index: 100;
     text-align: center;
-    -webkit-animation: fade-in 800ms ease 2400ms;
-    -moz-animation: fade-in 800ms ease 2400ms;
-    animation: fade-in 800ms ease 2400ms;
+    -webkit-animation: fade-in 800ms ease 2880ms;
+    -moz-animation: fade-in 800ms ease 2880ms;
+    animation: fade-in 800ms ease 2880ms;
     -webkit-animation-fill-mode: both;
     -moz-animation-fill-mode: both;
     animation-fill-mode: both;
@@ -970,6 +897,12 @@ hr {
   }
   .game-message .lower {
     margin-top: 30px !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
   }
 }
 

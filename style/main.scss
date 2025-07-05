@@ -18,12 +18,14 @@ $bright-text-color: #f9f6f2;
 
 $tile-color: #eee4da;
 $tile-gold-color: #edc22e;
-$tile-gold-glow-color: color.adjust($tile-gold-color, $lightness: 15%);
+
+$tile-shadow: 0 1px 5px rgba(0, 0, 0, .3);
 
 $game-container-margin-top: 40px;
 $game-container-background: #9c8a7b;
 
-$transition-speed: 200ms;
+$transition-speed: 240ms;
+$anime-bezier: cubic-bezier(0.1, 0.41, 0, 1.29);
 
 html, body {
   margin: 0;
@@ -53,12 +55,11 @@ h1.title {
 
 @include helpers.keyframes(move-up) {
   0% {
-    top: 25px;
+    transform: translateY(-25px);
     opacity: 1;
   }
-
   100% {
-    top: -50px;
+    transform: translateY(-100px);
     opacity: 0;
   }
 }
@@ -319,10 +320,8 @@ hr {
     border-radius: $tile-border-radius;
 
     background: $tile-color;
-    box-shadow:
-      // 此处要同步下文某处修改
-      0 1px 5px rgba(0, 0, 0, .2),
-      inset 0 1px 1px rgba(255, 255, 255, .2);
+    box-shadow: $tile-shadow;
+
     text-align: center;
     font-weight: bold;
     z-index: 10;
@@ -331,7 +330,7 @@ hr {
   }
 
   // Movement transition
-  @include helpers.transition($transition-speed cubic-bezier(0.28, 0.27, 0.22, 1.19));
+  @include helpers.transition($transition-speed $anime-bezier);
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   transition-property: transform;
@@ -376,18 +375,14 @@ hr {
       }
 
       // Set background
-      background: $mixed-background;
-
-      // Add glow
-      $glow-opacity: math.div(max($exponent - 4, 0), $limit - 4);
-
-      @if not $special-background {
-        box-shadow: 0 0 30px 10px rgba($tile-gold-glow-color, math.div($glow-opacity, 1.8)),
-                    inset 0 0 0 1px rgba(white, math.div($glow-opacity, 3)),
-                    // 此处要同步上文某处修改
-                    0 1px 5px rgba(0, 0, 0, .2),
-                    inset 0 1px 1px rgba(255, 255, 255, .2);
-      }
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.3) 0px,
+          rgba(255,255,255,0.08) 1.2px,
+          rgba(255,255,255,0) 3px
+        ),
+        $mixed-background;
 
       // Adjust font size for bigger numbers
       @if $power >= 100 and $power < 1000 {
@@ -423,39 +418,23 @@ hr {
 
 @include helpers.keyframes(appear) {
   0% {
-    opacity: 0;
     @include helpers.transform(scale(0));
   }
 
   100% {
-    opacity: 1;
     @include helpers.transform(scale(1));
   }
 }
 
 .tile-new .tile-inner {
-  @include helpers.animation(pop $transition-speed ease);
+  @include helpers.animation(appear $transition-speed $anime-bezier);
   @include helpers.animation-fill-mode(backwards);
   z-index: 30;
 }
 
-@include helpers.keyframes(pop) {
-  0% {
-    @include helpers.transform(scale(0));
-  }
-
-  60% {
-    @include helpers.transform(scale(1.1));
-  }
-
-  100% {
-    @include helpers.transform(scale(1));
-  }
-}
-
 .tile-merged .tile-inner {
   z-index: 20;
-  @include helpers.animation(pop $transition-speed ease $transition-speed * 0.2);
+  @include helpers.animation(appear $transition-speed $anime-bezier $transition-speed * 0.16);
   @include helpers.animation-fill-mode(backwards);
 }
 
@@ -468,7 +447,7 @@ hr {
 
   95% {
     @include helpers.transform(scale(0.8));
-    opacity: 0.9;
+    opacity: 1;
   }
   
   100% {
@@ -479,7 +458,7 @@ hr {
 
 .tile-will-merge .tile-inner {
   opacity: 0;
-  @include helpers.animation(disappear $transition-speed ease-out);
+  @include helpers.animation(disappear $transition-speed $anime-bezier);
 }
 
 .above-game {
@@ -576,5 +555,13 @@ hr {
     .lower {
       margin-top: 30px !important;
     }
+  }
+}
+
+// 尊重用户的设置
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
   }
 }

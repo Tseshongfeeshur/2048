@@ -95,7 +95,7 @@ KeyboardInputManager.prototype.listen = function () {
     gestureHandled = false;  // 开始新的一轮监听
   
     event.preventDefault();
-  });
+  }, { passive: false });
   
   gameContainer.addEventListener(this.eventTouchmove, function (event) {
     if (gestureHandled) return;
@@ -122,7 +122,7 @@ KeyboardInputManager.prototype.listen = function () {
     }
   
     event.preventDefault();
-  });
+  }, { passive: false });
   
   gameContainer.addEventListener(this.eventTouchend, function (event) {
     // 用户抬手，重置状态
