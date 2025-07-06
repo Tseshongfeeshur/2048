@@ -24,8 +24,8 @@ $tile-shadow: 0 1px 5px rgba(0, 0, 0, .3);
 $game-container-margin-top: 40px;
 $game-container-background: #9c8a7b;
 
-$transition-speed: 240ms;
-$anime-bezier: cubic-bezier(0.1, 0.41, 0, 1.29);
+$transition-speed: 150ms;
+$anime-bezier: cubic-bezier(0.43, 0.18, 0.15, 1.3);
 
 html, body {
   margin: 0;
@@ -451,7 +451,7 @@ hr {
 
 .tile-merged .tile-inner {
   z-index: 20;
-  @include helpers.animation(appear $transition-speed $anime-bezier $transition-speed * 0.16);
+  @include helpers.animation(appear $transition-speed $anime-bezier $transition-speed * .2);
   @include helpers.animation-fill-mode(backwards);
 }
 
