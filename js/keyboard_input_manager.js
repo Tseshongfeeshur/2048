@@ -132,7 +132,8 @@ KeyboardInputManager.prototype.listen = function () {
 
 KeyboardInputManager.prototype.restart = function (event) {
   event.preventDefault();
-  this.emit("restart");
+  const modal = document.getElementById("confirmModal");
+  modal.classList.add("show");
 };
 
 KeyboardInputManager.prototype.keepPlaying = function (event) {

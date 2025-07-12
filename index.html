@@ -95,6 +95,17 @@
     Created by <a href="https://gabrielecirulli.com/" target="_blank">Gabriele Cirulli</a>. Forked by <a href="https://teleblog.ryanyuan.top/" target="_blank">Ryan</a>.
     </p>
   </div>
+  
+  <div class="confirm-modal" id="confirmModal">
+    <div class="confirm-box">
+      <span class="confirm-title">New Game</span>
+      <p>Are you sure you want to start a new game? All progress will be lost.</p>
+      <div class="confirm-actions">
+        <span id="confirmYes">Start New Game</span>
+        <span id="confirmNo">Cancel</span>
+      </div>
+    </div>
+  </div>
 
   <script src="js/keyboard_input_manager.js"></script>
   <script src="js/html_actuator.js"></script>
@@ -102,6 +113,7 @@
   <script src="js/tile.js"></script>
   <script src="js/local_storage_manager.js"></script>
   <script src="js/game_manager.js"></script>
+  <script src="js/restart_confirm.js"></script>
   <script src="js/application.js"></script>
 </body>
 </html>

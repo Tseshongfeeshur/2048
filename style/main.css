@@ -213,6 +213,7 @@ hr {
   border-radius: 8px;
   padding: 0 20px;
   text-decoration: none;
+  cursor: pointer;
   color: #f9f6f2;
   height: 40px;
   line-height: 42px;
@@ -220,7 +221,6 @@ hr {
   margin-left: 9px;
 }
 .game-container .game-message a:hover {
-  background: rgb(130.2857142857, 112.5194805195, 97.7142857143);
   transform: scale(1.03);
 }
 .game-container .game-message a:active {
@@ -655,6 +655,7 @@ hr {
   border-radius: 8px;
   padding: 0 20px;
   text-decoration: none;
+  cursor: pointer;
   color: #f9f6f2;
   height: 40px;
   line-height: 42px;
@@ -664,11 +665,91 @@ hr {
   float: right;
 }
 .restart-button:hover {
-  background: rgb(130.2857142857, 112.5194805195, 97.7142857143);
   transform: scale(1.03);
 }
 .restart-button:active {
   transform: scale(0.97);
+}
+
+.confirm-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 144ms ease-out;
+  pointer-events: none;
+}
+.confirm-modal .confirm-box {
+  transform: scale(0.8);
+  transition: transform 240ms cubic-bezier(0.1, 0.41, 0, 1.29);
+}
+
+.confirm-modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.confirm-modal.show .confirm-box {
+  transform: scale(1);
+}
+
+.confirm-box {
+  background: #faf8ef;
+  padding: 1.4rem;
+  width: calc(100% - 6rem);
+  max-width: 24rem;
+  border-radius: calc(8px + 1.4rem);
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  font-size: 1.1rem;
+}
+
+.confirm-title {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 0.2rem;
+}
+
+.confirm-actions {
+  margin-top: 1.4rem;
+  display: block;
+}
+
+.confirm-actions span {
+  display: inline-block;
+  background: rgb(101.1428571429, 87.3506493506, 75.8571428571);
+  border-radius: 8px;
+  padding: 0 20px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #f9f6f2;
+  height: 40px;
+  line-height: 42px;
+  transition: background 0.2s ease, transform 0.1s ease;
+  margin-top: 0.6rem;
+  display: block;
+}
+.confirm-actions span:hover {
+  transform: scale(1.03);
+}
+.confirm-actions span:active {
+  transform: scale(0.97);
+}
+
+#confirmYes {
+  border: 2px solid rgb(101.1428571429, 87.3506493506, 75.8571428571);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+#confirmNo {
+  background: transparent;
+  border: 2px solid rgb(101.1428571429, 87.3506493506, 75.8571428571);
+  color: #776E65;
 }
 
 .game-explanation {
@@ -757,6 +838,7 @@ hr {
     border-radius: 8px;
     padding: 0 20px;
     text-decoration: none;
+    cursor: pointer;
     color: #f9f6f2;
     height: 40px;
     line-height: 42px;
@@ -764,7 +846,6 @@ hr {
     margin-left: 9px;
   }
   .game-container .game-message a:hover {
-    background: rgb(130.2857142857, 112.5194805195, 97.7142857143);
     transform: scale(1.03);
   }
   .game-container .game-message a:active {
