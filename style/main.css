@@ -214,6 +214,7 @@ hr {
   padding: 0 20px;
   text-decoration: none;
   cursor: pointer;
+  user-select: none;
   color: #f9f6f2;
   height: 40px;
   line-height: 42px;
@@ -656,6 +657,7 @@ hr {
   padding: 0 20px;
   text-decoration: none;
   cursor: pointer;
+  user-select: none;
   color: #f9f6f2;
   height: 40px;
   line-height: 42px;
@@ -727,6 +729,7 @@ hr {
   padding: 0 20px;
   text-decoration: none;
   cursor: pointer;
+  user-select: none;
   color: #f9f6f2;
   height: 40px;
   line-height: 42px;
@@ -839,6 +842,7 @@ hr {
     padding: 0 20px;
     text-decoration: none;
     cursor: pointer;
+    user-select: none;
     color: #f9f6f2;
     height: 40px;
     line-height: 42px;

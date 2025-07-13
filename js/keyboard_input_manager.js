@@ -70,7 +70,7 @@ KeyboardInputManager.prototype.listen = function () {
 
   // Respond to button presses
   this.bindButtonPress(".retry-button", this.restart);
-  this.bindButtonPress(".restart-button", this.restart);
+  this.bindButtonPress(".restart-button", this.confirmToRestart);
   this.bindButtonPress(".keep-playing-button", this.keepPlaying);
 
   // Respond to swipe events
@@ -130,10 +130,15 @@ KeyboardInputManager.prototype.listen = function () {
   });
 };
 
-KeyboardInputManager.prototype.restart = function (event) {
+KeyboardInputManager.prototype.confirmToRestart = function (event) {
   event.preventDefault();
   const modal = document.getElementById("confirmModal");
   modal.classList.add("show");
+};
+
+KeyboardInputManager.prototype.restart = function (event) {
+  event.preventDefault();
+  this.emit("restart");
 };
 
 KeyboardInputManager.prototype.keepPlaying = function (event) {
