@@ -178,16 +178,16 @@ hr {
   height: 40px;
   line-height: 42px;
   transition:
-    background .2s ease,
-    transform .1s ease;
+    background .2s ease-out,
+    transform .1s ease-out;
 
   &:hover {
     // background: color.adjust($game-container-background, $lightness: -10%);
-    transform: scale(1.03);
+    transform: scale(1.02);
   }
 
   &:active {
-    transform: scale(0.97);
+    transform: scale(0.98);
   }
 }
 

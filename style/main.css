@@ -218,14 +218,14 @@ hr {
   color: #f9f6f2;
   height: 40px;
   line-height: 42px;
-  transition: background 0.2s ease, transform 0.1s ease;
+  transition: background 0.2s ease-out, transform 0.1s ease-out;
   margin-left: 9px;
 }
 .game-container .game-message a:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 .game-container .game-message a:active {
-  transform: scale(0.97);
+  transform: scale(0.98);
 }
 .game-container .game-message a.keep-playing-button {
   display: none;
@@ -661,16 +661,16 @@ hr {
   color: #f9f6f2;
   height: 40px;
   line-height: 42px;
-  transition: background 0.2s ease, transform 0.1s ease;
+  transition: background 0.2s ease-out, transform 0.1s ease-out;
   display: block;
   text-align: center;
   float: right;
 }
 .restart-button:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 .restart-button:active {
-  transform: scale(0.97);
+  transform: scale(0.98);
 }
 
 .confirm-modal {
@@ -733,15 +733,15 @@ hr {
   color: #f9f6f2;
   height: 40px;
   line-height: 42px;
-  transition: background 0.2s ease, transform 0.1s ease;
+  transition: background 0.2s ease-out, transform 0.1s ease-out;
   margin-top: 0.6rem;
   display: block;
 }
 .confirm-actions span:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 .confirm-actions span:active {
-  transform: scale(0.97);
+  transform: scale(0.98);
 }
 
 #confirmYes {
@@ -846,14 +846,14 @@ hr {
     color: #f9f6f2;
     height: 40px;
     line-height: 42px;
-    transition: background 0.2s ease, transform 0.1s ease;
+    transition: background 0.2s ease-out, transform 0.1s ease-out;
     margin-left: 9px;
   }
   .game-container .game-message a:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
   }
   .game-container .game-message a:active {
-    transform: scale(0.97);
+    transform: scale(0.98);
   }
   .game-container .game-message a.keep-playing-button {
     display: none;
